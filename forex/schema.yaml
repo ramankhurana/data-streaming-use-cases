@@ -1,9 +1,9 @@
-org: Tony-Luo
-orgGuid: d0ca4a0b-b4b4-4821-83f7-d2146a0bc1c4
+org: Raman-Khurana
+orgGuid: d0ca4a0b-b4b4-4821-83f7-d2146a0bc1c5
 name: Use-Case-2
-projectGuid: e2b6e5b3-cab6-47cc-a753-e655d3ac8ef0
+projectGuid: e2b6e5b3-cab6-47cc-a753-e655d3ac8ef1
 partitionScheme: HOUR
-featureType: Integer
+featureType: Double
 importOptions:
   includesHeader: true
 fields:
@@ -16,53 +16,8 @@ fields:
   - name: Timestamp
     type: String
     classification: Timestamp
-  - name: month_TA1305000030
-    type: Integer
-    classification: Feature
-  - name: week_TA1305000030
-    type: Integer
-    classification: Feature
-  - name: day_TA1305000030
-    type: Integer
-    classification: Feature
-  - name: hour_TA1305000030
-    type: Integer
-    classification: Feature
-  - name: month_TA1306000010
-    type: Integer
-    classification: Feature
-  - name: week_TA1306000010
-    type: Integer
-    classification: Feature
-  - name: day_TA1306000010
-    type: Integer
-    classification: Feature
-  - name: hour_TA1306000010
-    type: Integer
-    classification: Feature
-  - name: month_TA1307000120
-    type: Integer
-    classification: Feature
-  - name: week_TA1307000120
-    type: Integer
-    classification: Feature
-  - name: day_TA1307000120
-    type: Integer
-    classification: Feature
-  - name: hour_TA1307000120
-    type: Integer
-    classification: Feature
-  - name: month_TA1307000126
-    type: Integer
-    classification: Feature
-  - name: week_TA1307000126
-    type: Integer
-    classification: Feature
-  - name: day_TA1307000126
-    type: Integer
-    classification: Feature
-  - name: hour_TA1307000126
-    type: Integer
+  - name: usd_val
+    type: Double
     classification: Feature
   - name: output_label
     type: Double
