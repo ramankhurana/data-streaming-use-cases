@@ -35,3 +35,50 @@ def stream_usd(increament, delay=175):
 
 
 stream_usd(0,delay_)
+
+
+
+
+
+****
+def stream_usd_fromfile():
+    from csv import reader
+    count = 100
+    with open('EURtoUSD_data.csv', 'r') as read_obj:
+        csv_reader = reader(read_obj)
+        is_header = True
+        # Iterate over each row in the csv using reader object
+        for row in csv_reader:
+            if not is_header and count:
+                data = ",".join(row)
+                print(data)
+                refit.stream_data(data)
+                count -= 1
+            else:
+                is_header = False
+
+
+
+import csv
+import random
+from datetime import datetime, timedelta
+
+# Define the start date
+start_date = datetime(2023, 1, 1, 0, 0, 0)
+
+# Open the csv file in write mode
+with open('EURtoUSD_data.csv', 'w', newline='') as file:
+    writer = csv.writer(file)
+    #writer.writerow(["index", "sensor_name", "timestamp", "value"])
+
+    for i in range(1000):  # for each minute in a year (60 * 24 * 365 = 525600)
+        # Calculate the current date and time
+        current_date = start_date + timedelta(minutes=i)
+        
+        # Generate a random value between 0.9 and 1.23
+        value = random.uniform(0.9, 1.23)
+        
+        # Write the data to the csv file
+        writer.writerow([i, "EURtoUSD", current_date.strftime("%Y-%m-%d %H:%M:%S"), format(value, ".8f")])
+
+
