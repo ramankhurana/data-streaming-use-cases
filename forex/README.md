@@ -13,7 +13,7 @@ delay_ = 175 ## seconds
 increament=0
 
 def stream_usd(increament, delay=175):
-    url = 'https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=EUR&to_currency=USD&apikey=WEJ426P3DZIP5YNK'
+    url = 'https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=EUR&to_currency=USD&apikey='
     r = requests.get(url)
     data = r.json()
     usd_val = data["Realtime Currency Exchange Rate"]["9. Ask Price"]
