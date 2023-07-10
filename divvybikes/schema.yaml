@@ -1,0 +1,24 @@
+org: Raman-Khurana
+orgGuid: d0ca4a0b-b4b4-4821-83f7-d2146a0bc1c5
+name: Use-Case-2
+projectGuid: e2b6e5b3-cab6-47cc-a753-e655d3ac8ef1
+partitionScheme: HOUR
+featureType: Double
+importOptions:
+  includesHeader: true
+fields:
+  - name: Auto-Increment
+    type: Integer
+    classification: ThrowAway
+  - name: DeviceID
+    type: String
+    classification: Key
+  - name: Timestamp
+    type: String
+    classification: Timestamp
+  - name: usd_val
+    type: Double
+    classification: Feature
+  - name: output_label
+    type: Double
+    classification: Label
